@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package main;
+package protos;
 
 message Data {
 	repeated Job jobs = 1;
