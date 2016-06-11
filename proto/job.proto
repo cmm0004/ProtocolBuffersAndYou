@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package main;
+
+message Data {
+	repeated Job jobs = 1;
+	Error error = 2;
+	
+	message Error {
+		int32 status = 1;
+		string message = 2;
+		} 
+}
+
+message Job {
+	string did = 1;
+	string title = 2;
+	bool active = 3;
+}
