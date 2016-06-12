@@ -32,7 +32,7 @@ func get_job_by_id_handler(ctx context.Context, w http.ResponseWriter, r *http.R
 	//  need an intermediary step to arrage your data into what you wanted to send.
 
 	foundjob := &protos.Data{
-		Error: nil,
+		Error: &protos.Data_Error{},
 		Jobs: []*protos.Job{
 			&protos.Job{
 				Did:    jobdid,
@@ -74,7 +74,7 @@ func get_job_by_id_handler(ctx context.Context, w http.ResponseWriter, r *http.R
 
 		fmt.Printf("\nsize of proto: %v", len(data))
 
-		fmt.Fprintf(w, "%v", data)
+		fmt.Fprintf(w, "%s", data)
 	}
 }
 
