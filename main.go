@@ -44,7 +44,7 @@ func get_job_by_id_handler(ctx context.Context, w http.ResponseWriter, r *http.R
 		log.Fatal("Error marshalling to protobufs, %v", err)
 	}
 
-	fmt.Fprintf(w, "%v", data)
+	fmt.Fprintf(w, "%s", data)
 }
 
 func main() {
