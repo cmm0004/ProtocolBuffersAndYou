@@ -74,7 +74,7 @@ func get_job_by_id_handler(ctx context.Context, w http.ResponseWriter, r *http.R
 
 		fmt.Printf("\nsize of proto: %v", len(data))
 
-		fmt.Fprintf(w, "%v", data)
+		fmt.Fprintf(w, "%s", data)
 	}
 }
 
